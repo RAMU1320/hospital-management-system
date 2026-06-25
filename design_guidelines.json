@@ -1,0 +1,90 @@
+{
+  "theme": "light",
+  "archetype": "Swiss & High-Contrast mixed with Organic Trust (Clinical Sanctuary)",
+  "design_philosophy": "A trustworthy modern healthcare/clinical SaaS. Feels like Linear or modern medical records. Distinct from generic 'purple gradient AI slop' and avoids medical clichés. Emphasizes dashboard density, clear typographic hierarchy, and asymmetric layouts for high-impact screens.",
+  "colors": {
+    "background": "bg-stone-50",
+    "surface": "bg-white",
+    "primary": "bg-blue-700",
+    "primary_hover": "hover:bg-blue-800",
+    "primary_foreground": "text-white",
+    "primary_muted": "bg-blue-50 text-blue-700",
+    "text_main": "text-slate-900",
+    "text_muted": "text-slate-500",
+    "border": "border-slate-200",
+    "statuses": {
+      "pending": "bg-amber-100 text-amber-800 border-amber-200",
+      "confirmed": "bg-blue-100 text-blue-800 border-blue-200",
+      "completed": "bg-emerald-100 text-emerald-800 border-emerald-200",
+      "cancelled": "bg-rose-100 text-rose-800 border-rose-200"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font_family": "font-sans",
+      "preferred_fonts": "Outfit, Cabinet Grotesk, or Satoshi",
+      "weight": "font-semibold to font-bold",
+      "tracking": "tracking-tight",
+      "h1": "text-3xl sm:text-4xl",
+      "h2": "text-2xl sm:text-3xl",
+      "h3": "text-xl sm:text-2xl"
+    },
+    "body": {
+      "font_family": "font-mono or font-sans",
+      "preferred_fonts": "IBM Plex Sans, Geist, or Manrope",
+      "size": "text-sm md:text-base",
+      "tabular_nums": "Use 'tabular-nums' class for all dashboard stats, tables, and billing sections."
+    }
+  },
+  "layout_and_spacing": {
+    "dashboard_grid": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6",
+    "card_padding": "p-5 md:p-6",
+    "page_container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8",
+    "auth_layout": "Asymmetric split screen. Left side: Form centered in p-12 container. Right side: Edge-to-edge image overlay with dark gradient and testimonial/branding."
+  },
+  "components": {
+    "cards": "Flat background, 1px subtle border (border-slate-200), no drop shadow by default. Rounded-xl.",
+    "buttons": "Sharp rounded-md or rounded-lg. Primary uses clinical blue. No generic soft shadows. Use active:scale-[0.98] on active state.",
+    "inputs": "bg-stone-50 border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 rounded-md. Crisp and dense layout.",
+    "tables": "Dense rows, text-sm. tabular-nums for numeric columns. Sticky headers with backdrop-blur. Use right alignment for numeric data.",
+    "badges": "rounded-full px-2.5 py-0.5 text-xs font-medium border"
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.pexels.com/photos/36488760/pexels-photo-36488760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "auth_background",
+        "description": "Elegant abstract view of modern building architecture at dusk. Use for the right half of the asymmetric login/register screen with a bg-black/40 overlay."
+      },
+      {
+        "url": "https://images.pexels.com/photos/6762866/pexels-photo-6762866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "avatar_doctor",
+        "description": "Confident male doctor. Use for doctor profile previews or admin doctor list."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwzfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3ODIyMjA5ODd8MA&ixlib=rb-4.1.0&q=85",
+        "category": "avatar_doctor_female",
+        "description": "Female professional portrait. Use for doctor profiles and appointment cards."
+      },
+      {
+        "url": "https://images.pexels.com/photos/6749739/pexels-photo-6749739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "avatar_patient",
+        "description": "Smiling patient. Use for patient profile or appointment lists."
+      }
+    ],
+    "icons": "Use Phosphor Icons (@phosphor-icons/react) 'duotone' or 'regular'. Alternatively, use 'lucide-react' with stroke-width 1.5."
+  },
+  "testing": {
+    "data_testid_rules": "CRITICAL: All interactive and key informational elements MUST include a data-testid attribute in kebab-case format. Examples: 'login-submit-button', 'patient-book-appointment-button', 'admin-revenue-stat', 'prescription-medication-input'."
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette. Do NOT use purple, teal (#1B93A4), or generic SaaS gradients.",
+    "Enforce the 'testing' data-testid rules strictly across all React components (.js files).",
+    "Implement Shadcn UI heavily but customize the border-radius to '0.5rem' (rounded-lg) and remove heavy drop-shadows on cards to achieve a clean flat aesthetic.",
+    "For the Admin dashboard, use a 4-column Bento grid for KPIs (Total Patients, Appointments Today, Revenue).",
+    "For the Patient portal, build a seamless, step-by-step appointment booking flow.",
+    "For the Doctor portal, the prescription writer should have a dense, functional 'clinical document' interface.",
+    "Ensure all data tables (Medical History, Admin panels, Billing) have pagination and search filters with a dense 'text-sm' layout.",
+    "Use pure HTML + Tailwind for marketing/auth layouts, and Shadcn UI for complex dashboard interactives."
+  ]
+}
