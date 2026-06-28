@@ -1,0 +1,26 @@
+{
+    "experimentalServices": {
+        "frontend": {
+            "root": "frontend",
+            "routePrefix": "/",
+            "framework": "create-react-app"
+        },
+        "backend": {
+            "root": "backend",
+            "routePrefix": "/_/backend"
+        }
+    },
+    "env": {
+        "MONGO_URL": "mongodb+srv://rock9059027289_db_user:Hospital2026@cluster0.mnjltwv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "DB_NAME": "hospital_db",
+        "CORS_ORIGINS": "*",
+        "JWT_SECRET": "3a7c9e2b5f8d1a4c6e9b2d5f8a1c4e7b9d2f5a8c1e4b7d9f2a5c8e1b4d7f9a2c",
+        "ADMIN_EMAIL": "admin@hospital.com",
+        "ADMIN_PASSWORD": "admin123",
+        "FRONTEND_URL": "*",
+        "STRIPE_API_KEY": "sk_test_emergent",
+        "STRIPE_WEBHOOK_SECRET": "",
+        "RESEND_API_KEY": "re_xxxxxxxxxxxxxxxx",
+        "SENDER_EMAIL": "MediCare Hospital <onboarding@resend.dev>"
+    }
+}
