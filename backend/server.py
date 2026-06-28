@@ -104,7 +104,7 @@ def require_roles(*allowed):
 def set_auth_cookie(response: Response, token: str):
     response.set_cookie(
         key="access_token", value=token, httponly=True,
-        secure=False, samesite="lax", max_age=12 * 3600, path="/",
+        secure=True, samesite="none", max_age=12 * 3600, path="/",
     )
 
 
